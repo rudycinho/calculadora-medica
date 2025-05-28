@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+  min-height: 100vh;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .card {
+  background: rgba(26, 32, 44, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.med-group {
+  background-color: #f1f5f9;
+  color: #64748b;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+.dark .med-group {
+  background-color: #2d3748;
+  color: #a0aec0;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transform: translateX(120%);
+  transition: transform 0.4s ease;
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.notification.success {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  color: white;
+}
+
+.notification.error {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  color: white;
+}
+
+.notification.warning {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+}
+
+.dosis-alert {
+  border-left: 4px solid;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 0 8px 8px 0;
+  background-color: rgba(254, 226, 226, 0.5);
+}
+
+.dosis-alert.warning {
+  border-color: #f59e0b;
+  background-color: rgba(254, 243, 199, 0.5);
+}
+
+.dosis-alert.danger {
+  border-color: #ef4444;
+  background-color: rgba(254, 226, 226, 0.5);
+}
+
+.dark .dosis-alert.warning {
+  background-color: rgba(120, 53, 15, 0.3);
+}
+
+.dark .dosis-alert.danger {
+  background-color: rgba(127, 29, 29, 0.3);
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.dark .history-item {
+  background-color: #2d3748;
+}
+
+.history-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.btn {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.input-field {
+  transition: all 0.3s ease;
+  border: 2px solid #e2e8f0;
+}
+
+.input-field:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.dark .input-field {
+  border-color: #4a5568;
+}
+
+.dark .input-field:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
